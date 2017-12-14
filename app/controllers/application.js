@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
     countUp() {
       this.incrementProperty('stats.counter');
     },
+    doubleCounter() {
+      const val = +this.get('stats.counter');
+      this.set('stats.counter', val * 2);
+    },
     resetCounter() {
       this.get('stats').clear();
     }
