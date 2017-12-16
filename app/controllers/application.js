@@ -3,6 +3,7 @@ import { storageFor } from 'ember-local-storage';
 
 export default Ember.Controller.extend({
   stats: storageFor('stats'),
+  likes: storageFor('likes'),
 
   actions: {
     countUp() {
@@ -13,7 +14,16 @@ export default Ember.Controller.extend({
       this.set('stats.counter', val * 2);
     },
     resetCounter() {
+      this.get('stats').reset();
+    },
+    clearCounter() {
       this.get('stats').clear();
+    },
+    addItem() {
+      this.get('likes').addObject('' + new Date().getTime());
+    },
+    clearItems() {
+      this.get('likes').clear();
     }
   },
 });

@@ -1,3 +1,18 @@
 <button {{action "countUp"}}>Page Visits: {{stats.counter}}</button>
+<br/>
 <button {{action "doubleCounter"}}>Double Up</button>
-<button {{action "resetCounter"}}>X</button>
+<br/>
+<button {{action "resetCounter"}}>Reset</button>
+<br/>
+<button {{action "clearCounter"}}>X</button>
+<br/>
+<br/>
+<button {{action "addItem"}}>Add</button>
+<button {{action "clearItems"}}>Clear</button>
+<div>
+  <ul>
+    {{#each likes as |like|}}
+      <li>{{like}}</li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,6 @@
+{
+  "name": "ember-quickstart",
+  "dependencies": {
+    "localforage": "~1.5.5"
+  }
+}
